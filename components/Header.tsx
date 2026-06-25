@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Navbar from "./Navbar";
 
 const navItems = [
@@ -20,13 +21,13 @@ export default function Header() {
         <div className="mx-auto grid min-h-10 max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 text-xs font-semibold sm:px-6 lg:px-8">
           <div className="hidden items-center gap-3 sm:flex">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/arteyestiloam/"
               target="_blank"
               rel="noreferrer"
               className="grid size-7 place-items-center rounded-full text-[11px] transition hover:bg-white/55"
               aria-label="Instagram de Arte y Estilo"
             >
-              IG
+              <FaInstagram className="size-5" aria-hidden="true" />
             </a>
             <a
               href="https://wa.me/"
@@ -35,7 +36,7 @@ export default function Header() {
               className="grid size-7 place-items-center rounded-full text-[11px] transition hover:bg-white/55"
               aria-label="WhatsApp de Arte y Estilo"
             >
-              WA
+              <FaWhatsapp className="size-5" aria-hidden="true" />
             </a>
           </div>
 
@@ -51,7 +52,7 @@ export default function Header() {
           >
             <span className="font-semibold">Reservá tu lugar</span>
             <span
-              className="grid size-9 place-items-center rounded-full border border-[#f09aaa] bg-[#ffb0bf] text-[#d95778] shadow-sm"
+              className="grid size-9 place-items-center rounded-full border border-[#f09aaa] bg-[#ffb0bf] text-[#d95778]  text-2xl shadow-sm"
               aria-hidden="true"
             >
               &#10047;
