@@ -9,7 +9,7 @@ const navItems = [
   { label: "Talleres", href: "#talleres" },
   { label: "Galeria", href: "#galeria" },
   { label: "Eventos", href: "#eventos" },
-  { label: "Ubicacion", href: "#ubicacion" },
+  { label: "Ubicación", href: "#ubicacion" },
 ];
 
 export default function Header() {
@@ -40,24 +40,10 @@ export default function Header() {
             </a>
           </div>
 
-          <p className="font-[var(--font-nunito-sans)] text-center  uppercase tracking-[0.16em]">
-            Talleres creativos para ni&ntilde;as en Tucum&aacute;n ❤️
+          <p className="font-[var(--font-nunito-sans)] text-center uppercase tracking-[0.16em]">
+            Talleres creativos para ni&ntilde;as en Tucum&aacute;n{" "}
+            <span aria-hidden="true">&hearts;</span>
           </p>
-
-          <a
-            href="https://wa.me/"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-auto hidden items-center gap-3 rounded-full px-2 py-1 text-[11px] transition hover:bg-white/40 sm:flex"
-          >
-            <span className="font-semibold">Reservá tu lugar</span>
-            <span
-              className="grid size-9 place-items-center rounded-full border border-[#f09aaa] bg-[#ffb0bf] text-[#d95778]  text-2xl shadow-sm"
-              aria-hidden="true"
-            >
-              &#10047;
-            </span>
-          </a>
         </div>
       </div>
 
@@ -67,46 +53,48 @@ export default function Header() {
           className="group flex items-center gap-3"
           aria-label="Arte y Estilo, ir al inicio"
         >
-          <span className="grid size-11 place-items-center rounded-full bg-[#f7b6c6] text-lg font-black text-white shadow-sm">
-            ae
-          </span>
-          <span className="leading-none">
-            <span className="block text-xl font-black text-[#e85f88]">
-              arte & estilo
+          <span className="relative block pr-9 leading-none">
+            <span className="block logo-font whitespace-nowrap text-[1.9rem] font-normal leading-none text-[#ff7b1f] drop-shadow-[0_1px_0_rgba(255,255,255,0.9)] sm:text-[2.25rem] lg:text-[2rem]">
+              arte{" "}
+              <span
+                className="inline-block align-middle text-[1.2rem] sm:text-[1.6rem] lg:text-[1.45rem] font-semibold leading-none"
+                style={{ transform: "scale(0.95)", transformOrigin: "center" }}
+              >
+                &amp;
+              </span>{" "}
+              estilo
             </span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.24em] text-[#98ad6f]">
-              art room
+            <span
+              className="absolute right-1 top-0 -translate-y-1 text-[1rem] text-rosa"
+              aria-hidden="true"
+            >
+              ♡
+            </span>
+            <span className="mt-1 block text-center by-agus-mena-font text-[0.78rem] font-bold uppercase tracking-[0.18em] text-rosa">
+              BY AGUS MENA
             </span>
           </span>
         </a>
 
-        <Navbar
-          items={navItems}
-          variant="desktop"
-        />
+        <Navbar items={navItems} variant="desktop" />
 
-        <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-semibold text-[#e85f88] transition hover:text-[#c94972]"
-          >
-            Instagram
-          </a>
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href="https://wa.me/"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-[#f4c45f] px-5 py-2.5 text-sm font-black text-[#5b4636] shadow-sm transition hover:bg-[#efb43f]"
+            className="ml-auto hidden items-center gap-2 rounded-full bg-rosa px-4 py-2 text-sm text-white shadow-sm transition hover:bg-[#ff81b8] sm:flex by-agus-mena-font"
           >
-            Inscribite
+            <span>Reserv&aacute; tu lugar</span>
+            <span className="text-2xl leading-none" aria-hidden="true">
+              ♡
+            </span>
           </a>
         </div>
 
         <button
           type="button"
-          className="grid size-11 place-items-center rounded-full border border-rose-100 bg-white text-[#e85f88] md:hidden"
+          className="grid size-11 place-items-center rounded-full border border-rose-100 bg-white text-[#e85f88] lg:hidden"
           aria-label={isMenuOpen ? "Cerrar menu" : "Abrir menu"}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((current) => !current)}

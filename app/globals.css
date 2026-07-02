@@ -1,5 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@400&family=Sniglet:wght@400&display=swap");
 @import "tailwindcss";
 
+:root {
+  --font-playwrite-ar: "Playwrite AR", cursive;
+  --color-brand-brown: #5b4636;
+  --color-rosa:#E6627E;
+  
+}
+
+.logo-font {
+  font-family: "Playwrite AR", cursive;
+  font-weight: 400;
+}
+
+.by-agus-mena-font {
+  font-family: "Sniglet", cursive;
+}
+
+.text-brand-brown {
+  color: var(--color-brand-brown);
+}
+
+.text-rosa {
+  color: var(--color-rosa);
+}
+.bg-rosa {
+  background-color: var(--color-rosa);
+}
 html {
   scroll-behavior: smooth;
 }
