@@ -18,8 +18,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-rose-100 bg-[#fff7f3]/95 backdrop-blur">
       <div className="bg-[#ffc4cf] text-[#4f403c]">
-        <div className="mx-auto grid min-h-10 max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 text-xs font-semibold sm:px-6 lg:px-8">
-          <div className="hidden items-center gap-3 sm:flex">
+        <div className="mx-auto grid min-h-10 max-w-7xl grid-cols-1 sm:grid-cols-[1fr_6fr] items-center gap-3 px-4 text-xs font-semibold sm:px-6 lg:px-8">
+          <div className=" hidden items-center gap-3 sm:flex">
             <a
               href="https://www.instagram.com/arteyestiloam/"
               target="_blank"
@@ -39,11 +39,22 @@ export default function Header() {
               <FaWhatsapp className="size-5" aria-hidden="true" />
             </a>
           </div>
-
-          <p className="font-[var(--font-nunito-sans)] text-center uppercase tracking-[0.16em]">
-            Talleres creativos para ni&ntilde;as en Tucum&aacute;n{" "}
-            <span aria-hidden="true">&hearts;</span>
-          </p>
+          <div className="w-full overflow-hidden">
+            <div className="slide-horizontal inline-flex items-center whitespace-nowrap">
+              <span className="text-center uppercase tracking-[0.16em] mr-[3cm]">
+                Talleres creativos para ni&ntilde;as en Tucum&aacute;n <span aria-hidden="true">&hearts;</span>
+              </span>
+              <span className="text-center uppercase tracking-[0.16em] mr-[3cm]">
+                Talleres creativos para ni&ntilde;as en Tucum&aacute;n <span aria-hidden="true">&hearts;</span>
+              </span>
+              <span className="text-center uppercase tracking-[0.16em] mr-[3cm]">
+                Talleres creativos para ni&ntilde;as en Tucum&aacute;n <span aria-hidden="true">&hearts;</span>
+              </span>
+              <span className="text-center uppercase tracking-[0.16em]">
+                Talleres creativos para ni&ntilde;as en Tucum&aacute;n <span aria-hidden="true">&hearts;</span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 

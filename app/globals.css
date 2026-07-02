@@ -4,8 +4,7 @@
 :root {
   --font-playwrite-ar: "Playwrite AR", cursive;
   --color-brand-brown: #5b4636;
-  --color-rosa:#E6627E;
-  
+  --color-rosa: #e6627e;
 }
 
 .logo-font {
@@ -34,4 +33,18 @@ html {
 body {
   margin: 0;
   background: #fff7f3;
+}
+
+.slide-horizontal {
+  display: inline-flex;
+  animation: slide-horizontal 12s linear infinite;
+}
+
+@keyframes slide-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
