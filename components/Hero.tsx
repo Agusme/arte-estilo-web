@@ -2,71 +2,113 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#fff7f3] pb-24">
-      {" "}
-      <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
+<section className="relative min-h-dvh overflow-hidden bg-fondo">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
-          <div className="flex min-h-[600px] flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <h1 className="text-4xl font-black  text-[#e85f88] sm:text-5xl lg:text-6xl">
-                Un lugar donde{" "}
-                <span className="text-[#98ad6f]">la creatividad</span> cobra
-                color.
+          {/* Texto */}
+          <div className="flex min-h-[600px] pl-6 flex-col pt-16">
+            <div className="space-y-6 ">
+              <h1 className="font-title leading-[1.05]">
+                <span className="font-hand block text-[40px] font-normal tracking-tight text-gris lg:text-[45px]">
+                  Un lugar donde
+                </span>
+
+                <span className="font-logo mt-1 block text-[40px] text-rosa lg:text-[45px]">
+                  la creatividad
+                </span>
+
+                <div className="mt-1">
+                  <span className="font-logo text-[40px] text-verde lg:text-[45px]">
+                    cobra color
+                  </span>
+
+                  <svg
+                    className="ml-10 mt-1 h-3 w-32"
+                    viewBox="0 0 180 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4 12 C40 18,90 2,176 12"
+                      stroke="var(--color-lila)"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </div>
               </h1>
-              <p className="max-w-xl text-base leading-7 text-[#7a6a61] sm:text-lg">
-                Talleres creativos para niñas donde la imaginación se convierte
-                en arte y los momentos se vuelven recuerdos.
+
+              <p className="max-w-md text-[18px] font-semibold text-gris">
+                Talleres creativos para niñas de 5 a 12 años donde crean,
+                exploran y desarrollan su imaginación mientras se divierten.
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <a
-                href="#talleres"
-                className="inline-flex items-center justify-center rounded-full bg-[#e85f88] px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#ff81b8]"
-              >
-                Ver próximos talleres
-              </a>
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#7a6a61]">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#e85f88]" />
-                Cupos limitados
-              </span>
-            </div>
+
+<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
+  <a
+    href="#talleres"
+    className="inline-flex items-center justify-center rounded-full bg-rosa px-6 py-4 text-sm font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-rosa-hover"
+  >
+    VER PRÓXIMOS TALLERES →
+  </a>
+
+  <a
+    href="#sobre-mi"
+    className="inline-flex items-center justify-center rounded-full border border-gris-claro bg-white px-6 py-4 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
+  >
+    CONOCÉ MÁS ♡
+  </a>
+</div>
           </div>
 
-<div className="relative -mr-[calc((100vw-100%)/2)] h-[650px]">            <Image
+          {/* Imagen */}
+          <div className="relative -mr-[calc((100vw-100%)/2)] h-[650px]">
+            <Image
               src="/images/hero.png"
               alt="Niñas pintando en un taller creativo"
               fill
               priority
-className="object-cover object-[50%_50%]"
-/>
+className="object-cover object-[42%_58%]"            />
 
-            {/* Degradado para que el texto respire */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#fff7f3] via-[#fff7f340] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-fondo via-[#fff8f580] to-transparent" />
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-          <svg
-            viewBox="0 0 1440 320"
-            preserveAspectRatio="none"
-            className="w-full h-[220px]"
-          >
-            <path
-              fill="#fff"
-              d="
-        M0,180
-        C220,320
-        520,40
-        760,160
-        C980,260
-        1220,80
-        1440,180
-        L1440,320
-        L0,320
+
+        {/* Onda */}
+<div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    viewBox="0 0 1440 180"
+    preserveAspectRatio="none"
+    className="block h-32 w-full lg:h-40"
+  >
+    {/* Línea rosa */}
+    <path
+      d="
+        M0,70
+        C180,20 360,120 540,70
+        S900,20 1080,70
+        S1260,120 1440,70
+      "
+      fill="none"
+      stroke="#F6AFC4"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+
+    {/* Onda blanca */}
+    <path
+      d="
+        M0,76
+        C180,26 360,126 540,76
+        S900,26 1080,76
+        S1260,126 1440,76
+        L1440,180
+        L0,180
         Z
       "
-            />
-          </svg>
-        </div>
+      fill="#fff"
+    />
+  </svg>
+</div>
       </div>
     </section>
   );

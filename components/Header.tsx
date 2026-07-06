@@ -65,7 +65,7 @@ export default function Header() {
           aria-label="Arte y Estilo, ir al inicio"
         >
           <span className="relative block pr-9 leading-none">
-            <span className="block logo-font whitespace-nowrap text-[1.9rem] font-normal leading-none text-[#ff7b1f] drop-shadow-[0_1px_0_rgba(255,255,255,0.9)] sm:text-[2.25rem] lg:text-[2rem]">
+            <span className="block font-logo whitespace-nowrap text-[1.9rem] font-normal leading-none text-[#ff7b1f] drop-shadow-[0_1px_0_rgba(255,255,255,0.9)] sm:text-[2.25rem] lg:text-[2rem]">
               arte{" "}
               <span
                 className="inline-block align-middle text-[1.2rem] sm:text-[1.6rem] lg:text-[1.45rem] font-semibold leading-none"
@@ -81,7 +81,7 @@ export default function Header() {
             >
               ♡
             </span>
-            <span className="mt-1 block text-center by-agus-mena-font text-[0.78rem] font-bold uppercase tracking-[0.18em] text-rosa">
+            <span className="mt-1 block text-center font-hand  text-[0.78rem] font-bold uppercase tracking-[0.18em] text-rosa">
               BY AGUS MENA
             </span>
           </span>
@@ -89,7 +89,7 @@ export default function Header() {
 
         <Navbar items={navItems} variant="desktop" />
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           <a
             href="https://wa.me/"
             target="_blank"
@@ -102,7 +102,6 @@ export default function Header() {
             </span>
           </a>
         </div>
-
         <button
           type="button"
           className="grid size-11 place-items-center rounded-full border border-rose-100 bg-white text-[#e85f88] lg:hidden"
