@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { LuHeart } from "react-icons/lu";
 
 type NavItem = {
   label: string;
@@ -80,9 +81,8 @@ export default function Navbar({
         className="ml-auto hidden items-center gap-2 rounded-full bg-rosa px-4 py-2 text-sm  text-white shadow-sm transition hover:bg-[#ff81b8] sm:flex by-agus-mena-font"
       >
         <span>Reserv&aacute; tu lugar</span>
-        <span className="text-2xl leading-none" aria-hidden="true">
-          ♡
-        </span>
+            <LuHeart className="h-4 w-4 text-rosa" />
+
       </a>
     </div>
   );

@@ -1,9 +1,10 @@
 import Image from "next/image";
-
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { LuHeart } from "react-icons/lu";
 export default function Hero() {
   return (
-<section className="relative min-h-dvh overflow-hidden bg-fondo">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-dvh overflow-hidden bg-fondo">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
           {/* Texto */}
           <div className="flex min-h-[600px] pl-6 flex-col pt-16">
@@ -43,21 +44,21 @@ export default function Hero() {
               </p>
             </div>
 
-<div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
-  <a
-    href="#talleres"
-    className="inline-flex items-center justify-center rounded-full bg-rosa px-6 py-4 text-sm font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-rosa-hover"
-  >
-    VER PRÓXIMOS TALLERES →
-  </a>
-
-  <a
-    href="#sobre-mi"
-    className="inline-flex items-center justify-center rounded-full border border-gris-claro bg-white px-6 py-4 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
-  >
-    CONOCÉ MÁS ♡
-  </a>
-</div>
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
+              <a
+                href="#talleres"
+                className="group inline-flex items-center gap-2 rounded-full bg-rosa px-6 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-rosa-hover"
+              >
+                VER PRÓXIMOS TALLERES
+                <HiOutlineArrowLongRight className="text-xl transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#sobre-mi"
+                className="inline-flex items-center gap-2 rounded-full border border-gris-claro bg-white px-6 py-4 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
+              >
+                CONOCÉ MÁS <LuHeart className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           {/* Imagen */}
@@ -67,36 +68,38 @@ export default function Hero() {
               alt="Niñas pintando en un taller creativo"
               fill
               priority
-className="object-cover object-[42%_58%]"            />
+              className="object-cover object-[42%_58%]"
+            />
 
             <div className="absolute inset-0 bg-gradient-to-r from-fondo via-[#fff8f580] to-transparent" />
+        
           </div>
         </div>
 
         {/* Onda */}
-<div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-  <svg
-    viewBox="0 0 1440 180"
-    preserveAspectRatio="none"
-    className="block h-32 w-full lg:h-40"
-  >
-    {/* Línea rosa */}
-    <path
-      d="
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <svg
+            viewBox="0 0 1440 180"
+            preserveAspectRatio="none"
+            className="block h-32 w-full lg:h-40"
+          >
+            {/* Línea rosa */}
+            <path
+              d="
         M0,70
         C180,20 360,120 540,70
         S900,20 1080,70
         S1260,120 1440,70
       "
-      fill="none"
-      stroke="#F6AFC4"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+              fill="none"
+              stroke="#F6AFC4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
 
-    {/* Onda blanca */}
-    <path
-      d="
+            {/* Onda blanca */}
+            <path
+              d="
         M0,76
         C180,26 360,126 540,76
         S900,26 1080,76
@@ -105,10 +108,10 @@ className="object-cover object-[42%_58%]"            />
         L0,180
         Z
       "
-      fill="#fff"
-    />
-  </svg>
-</div>
+              fill="#fff"
+            />
+          </svg>
+        </div>
       </div>
     </section>
   );
