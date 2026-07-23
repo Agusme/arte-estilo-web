@@ -6,58 +6,43 @@ export default function Hero() {
   return (
     <section className="relative h-screen overflow-hidden bg-fondo">
       <div className="mx-auto flex h-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid h-full w-full items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
+        <div className="grid h-full w-full items-center gap-10 md:grid-cols-[0.7fr_1.3fr]">
           {/* Texto */}
-          <div className="flex h-full flex-col justify-center pl-6">
+          <div className="flex h-full flex-col justify-center pl-6 -mt-10 lg:-mt-16">
             {" "}
-            <div className="space-y-5">
-              <h1 className="font-title leading-[0.95] tracking-tight">
-                <span className="font-hand block text-[34px] font-normal text-gris sm:text-[38px] lg:text-[42px]">
-                  Un lugar donde
+            <div className="space-y-7">
+              <h1 className="max-w-[520px] ">
+                {" "}
+                <span className="font-logo block  font-normal text-gris sm:text-[38px] lg:text-[28px]">
+                  Un lugar donde{" "}
                 </span>
-
-                <span className="font-logo mt-1 block text-[34px] text-rosa sm:text-[38px] lg:text-[42px]">
-                  la creatividad
+                <span className="font-hand   text-[34px] text-rosa sm:text-[38px] lg:text-[42px]">
+                  LA CREATIVIDAD
                 </span>
-
-                <div className="mt-1">
-                  <span className="font-hand block text-[34px] text-verde sm:text-[38px] lg:text-[42px]">
-                    cobra color
-                  </span>
-
-                  <svg
-                    className="ml-8 mt-1 h-3 w-28 sm:ml-10 sm:w-32"
-                    viewBox="0 0 180 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M4 12 C40 18,90 2,176 12"
-                      stroke="var(--color-lila)"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+                <span className=" font-hand -mt-[6px] leading-[1] block text-[34px] text-gris-claro sm:text-[38px] lg:text-[42px]">
+                  cobra color{" "}
+                </span>
               </h1>
 
-              <p className="max-w-md text-[16px] font-semibold leading-relaxed text-gris sm:text-[17px]">
+              <p className="max-w-md text-[16px] font-medium leading-relaxed text-gris sm:text-[17px]">
                 Talleres creativos para niñas de 4 a 12 años donde crean,
                 exploran y desarrollan su imaginación mientras se divierten.
               </p>
             </div>
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row">
               <a
                 href="#talleres"
-                className="group inline-flex items-center gap-2 rounded-full bg-rosa px-6 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-rosa-hover"
+                className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-rosa px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-rosa-hover"
               >
                 VER PRÓXIMOS TALLERES
-                <HiOutlineArrowLongRight className="text-xl transition-transform group-hover:translate-x-1" />
+                <HiOutlineArrowLongRight className="text-lg transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#sobre-mi"
-                className="inline-flex items-center gap-2 rounded-full border border-gris-claro bg-white px-6 py-4 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-gris-claro bg-white px-5 py-3 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
               >
-                CONOCÉ MÁS <LuHeart className="h-4 w-4" />
+                CONOCÉ MÁS
+                <LuHeart className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -72,9 +57,9 @@ export default function Hero() {
               fill
               priority
               sizes="(max-width: 768px) 100vw, 60vw"
-              className="object-cover object-[42%_58%]"
+              className="object-cover object-[55%_50%]"
             />
-            <div className="absolute inset-0 bg-linear-to-r from-fondo via-[#fff8f580] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#fff9f6] via-[#fff9f640] to-transparent" />{" "}
           </div>
         </div>
 
