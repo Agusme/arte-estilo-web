@@ -1,30 +1,32 @@
 import Image from "next/image";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { LuHeart } from "react-icons/lu";
+
 export default function Hero() {
   return (
-    <section className="relative min-h-dvh overflow-hidden bg-fondo">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
+    <section className="relative h-screen overflow-hidden bg-fondo">
+      <div className="mx-auto flex h-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid h-full w-full items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
           {/* Texto */}
-          <div className="flex min-h-[600px] pl-6 flex-col pt-16">
-            <div className="space-y-6 ">
-              <h1 className="font-title leading-[1.05]">
-                <span className="font-hand block text-[40px] font-normal tracking-tight text-gris lg:text-[45px]">
+          <div className="flex h-full flex-col justify-center pl-6">
+            {" "}
+            <div className="space-y-5">
+              <h1 className="font-title leading-[0.95] tracking-tight">
+                <span className="font-hand block text-[34px] font-normal text-gris sm:text-[38px] lg:text-[42px]">
                   Un lugar donde
                 </span>
 
-                <span className="font-logo mt-1 block text-[40px] text-rosa lg:text-[45px]">
+                <span className="font-logo mt-1 block text-[34px] text-rosa sm:text-[38px] lg:text-[42px]">
                   la creatividad
                 </span>
 
                 <div className="mt-1">
-                  <span className="font-logo text-[40px] text-verde lg:text-[45px]">
+                  <span className="font-hand block text-[34px] text-verde sm:text-[38px] lg:text-[42px]">
                     cobra color
                   </span>
 
                   <svg
-                    className="ml-10 mt-1 h-3 w-32"
+                    className="ml-8 mt-1 h-3 w-28 sm:ml-10 sm:w-32"
                     viewBox="0 0 180 20"
                     fill="none"
                   >
@@ -38,12 +40,11 @@ export default function Hero() {
                 </div>
               </h1>
 
-              <p className="max-w-md text-[18px] font-semibold text-gris">
-                Talleres creativos para niñas de 5 a 12 años donde crean,
+              <p className="max-w-md text-[16px] font-semibold leading-relaxed text-gris sm:text-[17px]">
+                Talleres creativos para niñas de 4 a 12 años donde crean,
                 exploran y desarrollan su imaginación mientras se divierten.
               </p>
             </div>
-
             <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
               <a
                 href="#talleres"
@@ -62,26 +63,27 @@ export default function Hero() {
           </div>
 
           {/* Imagen */}
-          <div className="relative -mr-[calc((100vw-100%)/2)] h-[650px]">
+          {/* Imagen */}
+          <div className="relative h-full -mr-[calc((100vw-100%)/2)] overflow-hidden rounded-l-[2rem]">
+            {" "}
             <Image
               src="/images/hero.png"
               alt="Niñas pintando en un taller creativo"
               fill
               priority
+              sizes="(max-width: 768px) 100vw, 60vw"
               className="object-cover object-[42%_58%]"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-r from-fondo via-[#fff8f580] to-transparent" />
-        
+            <div className="absolute inset-0 bg-linear-to-r from-fondo via-[#fff8f580] to-transparent" />
           </div>
         </div>
 
         {/* Onda */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
           <svg
-            viewBox="0 0 1440 180"
+            viewBox="0 0 1440 120"
             preserveAspectRatio="none"
-            className="block h-32 w-full lg:h-40"
+            className="block h-20 w-full lg:h-24"
           >
             {/* Línea rosa */}
             <path
@@ -104,8 +106,8 @@ export default function Hero() {
         C180,26 360,126 540,76
         S900,26 1080,76
         S1260,126 1440,76
-        L1440,180
-        L0,180
+        L1440,120
+        L0,120
         Z
       "
               fill="#fff"

@@ -5,12 +5,11 @@ import {
   LuSmile,
   LuUsers,
 } from "react-icons/lu";
-
+import { PinkAccent } from "./ui/PinkAccent";
 const items = [
   {
     title: "Grupos chiquitos",
-    description:
-      "Máximo 6 niñas por turno para que todas disfruten.",
+    description: "Máximo 6 niñas por turno para que todas disfruten.",
     icon: LuUsers,
     badgeClass: "bg-rosa/10 text-rosa",
     cardClass: "border-rose-200/80 bg-[#fff8fb]",
@@ -41,34 +40,27 @@ const items = [
   },
   {
     title: "Para todas",
-    description:
-      " Para niñas de 4 a 12 años que les encanta crear.",
+    description: " Para niñas de 4 a 12 años que les encanta crear.",
     icon: LuSmile,
     badgeClass: "bg-pink-100 text-pink-500",
     cardClass: "border-rose-200/80 bg-[#fff8fb]",
   },
- 
 ];
 
 export default function Benefits() {
   return (
     <section
       id="beneficios"
-      className="relative overflow-hidden bg-[#fff9f6] py-20"
+      className="relative overflow-hidden bg-[#fff9f6] py-6"
     >
-      <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-white to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-8 bg-linear-to-b from-white to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.32em] text-rosa">
-            Beneficios
-          </p>
-          <h2 className="mt-4 text-3xl font-bold text-gris sm:text-4xl">
-            Una experiencia creativa pensada para florecer
+        <div className="mb-4 text-center flex justify-center ">
+          <PinkAccent />
+          <h2 className="mt-0 text-xl font-bold text-gris ">
+            ACÁ CREÁS, TE DIVERTÍS Y TE LLEVÁS ALGO ÚNICO{" "}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base font-medium text-gris-claro">
-            Cada taller combina creatividad, cariño y organización para que cada
-            niña se sienta segura, inspirada y feliz.
-          </p>
+          <PinkAccent className="scale-x-[-1]" />
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
