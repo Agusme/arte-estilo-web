@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="mx-auto flex h-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid h-full w-full items-center gap-10 md:grid-cols-[0.7fr_1.3fr]">
           {/* Texto */}
-          <div className="flex h-full flex-col justify-center pl-6 -mt-10 lg:-mt-16">
+          <div className="flex h-full flex-col justify-center pl-6 pt-12 sm:pt-8 md:pt-6 lg:-mt-16 lg:pt-0">
             {" "}
             <div className="space-y-7">
               <h1 className="relative max-w-[520px]">
