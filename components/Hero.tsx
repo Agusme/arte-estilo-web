@@ -1,87 +1,77 @@
 import Image from "next/image";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { LuHeart } from "react-icons/lu";
+import { LuHeart, LuSparkles } from "react-icons/lu";
+
 export default function Hero() {
   return (
-    <section className="relative min-h-dvh overflow-hidden bg-fondo">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
+    <section className="relative h-screen overflow-hidden bg-fondo">
+      <div className="mx-auto flex h-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid h-full w-full items-center gap-10 md:grid-cols-[0.7fr_1.3fr]">
           {/* Texto */}
-          <div className="flex min-h-[600px] pl-6 flex-col pt-16">
-            <div className="space-y-6 ">
-              <h1 className="font-title leading-[1.05]">
-                <span className="font-hand block text-[40px] font-normal tracking-tight text-gris lg:text-[45px]">
-                  Un lugar donde
+          <div className="flex h-full flex-col justify-center pl-6 pt-12 sm:pt-8 md:pt-6 lg:-mt-16 lg:pt-0">
+            {" "}
+            <div className="space-y-7">
+              <h1 className="relative max-w-[520px]">
+                <LuSparkles className="pointer-events-none absolute -left-6 top-2 hidden h-4 w-4 text-rosa/80 sm:block" />
+                <LuHeart className="pointer-events-none absolute right-10 top-1 hidden h-4 w-4 text-gris/80 sm:block" />
+                <LuSparkles className="pointer-events-none absolute right-20 top-20 hidden h-4 w-4 text-naranja/80 sm:block" />
+                <LuHeart className="pointer-events-none absolute left-7 -bottom-4 hidden h-3 w-3 text-naranja/80 sm:block" />
+                <span className="font-logo block  font-normal text-gris sm:text-[38px] lg:text-[28px]">
+                  Un lugar donde{" "}
                 </span>
-
-                <span className="font-logo mt-1 block text-[40px] text-rosa lg:text-[45px]">
-                  la creatividad
+                <span className="font-hand   text-[34px] text-rosa sm:text-[38px] lg:text-[42px]">
+                  LA CREATIVIDAD
                 </span>
-
-                <div className="mt-1">
-                  <span className="font-logo text-[40px] text-verde lg:text-[45px]">
-                    cobra color
-                  </span>
-
-                  <svg
-                    className="ml-10 mt-1 h-3 w-32"
-                    viewBox="0 0 180 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M4 12 C40 18,90 2,176 12"
-                      stroke="var(--color-lila)"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+                <span className=" font-hand -mt-[6px] leading-[1] block text-[34px] text-gris-claro sm:text-[38px] lg:text-[42px]">
+                  cobra color{" "}
+                </span>
               </h1>
 
-              <p className="max-w-md text-[18px] font-semibold text-gris">
-                Talleres creativos para niñas de 5 a 12 años donde crean,
+              <p className="max-w-md text-[16px] font-medium leading-relaxed text-gris sm:text-[17px]">
+                Talleres creativos para niñas de 4 a 12 años donde crean,
                 exploran y desarrollan su imaginación mientras se divierten.
               </p>
             </div>
-
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row">
               <a
                 href="#talleres"
-                className="group inline-flex items-center gap-2 rounded-full bg-rosa px-6 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-rosa-hover"
+                className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-rosa px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-rosa-hover"
               >
                 VER PRÓXIMOS TALLERES
-                <HiOutlineArrowLongRight className="text-xl transition-transform group-hover:translate-x-1" />
+                <HiOutlineArrowLongRight className="text-lg transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#sobre-mi"
-                className="inline-flex items-center gap-2 rounded-full border border-gris-claro bg-white px-6 py-4 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-gris-claro bg-white px-5 py-3 text-sm font-semibold text-gris transition-all duration-300 hover:bg-rosa-claro"
               >
-                CONOCÉ MÁS <LuHeart className="h-4 w-4" />
+                CONOCÉ MÁS
+                <LuHeart className="h-4 w-4" />
               </a>
             </div>
           </div>
 
           {/* Imagen */}
-          <div className="relative -mr-[calc((100vw-100%)/2)] h-[650px]">
+          {/* Imagen */}
+          <div className="relative h-full -mr-[calc((100vw-100%)/2)] overflow-hidden rounded-l-[2rem]">
+            {" "}
             <Image
               src="/images/hero.png"
               alt="Niñas pintando en un taller creativo"
               fill
               priority
-              className="object-cover object-[42%_58%]"
+              sizes="(max-width: 768px) 100vw, 60vw"
+              className="object-cover object-[55%_50%]"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-r from-fondo via-[#fff8f580] to-transparent" />
-        
+            <div className="absolute inset-0 bg-gradient-to-r from-[#fff9f6] via-[#fff9f640] to-transparent" />{" "}
           </div>
         </div>
 
         {/* Onda */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
           <svg
-            viewBox="0 0 1440 180"
+            viewBox="0 0 1440 120"
             preserveAspectRatio="none"
-            className="block h-32 w-full lg:h-40"
+            className="block h-20 w-full lg:h-24"
           >
             {/* Línea rosa */}
             <path
@@ -104,8 +94,8 @@ export default function Hero() {
         C180,26 360,126 540,76
         S900,26 1080,76
         S1260,126 1440,76
-        L1440,180
-        L0,180
+        L1440,120
+        L0,120
         Z
       "
               fill="#fff"

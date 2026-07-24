@@ -6,94 +6,106 @@ import {
   LuUsers,
 } from "react-icons/lu";
 
+import { PinkAccent } from "./ui/PinkAccent";
+import { BenefitIcon } from "./ui/BenefitIcon";
+
 const items = [
   {
-    title: "Grupos chiquitos",
-    description:
-      "Máximo 6 niñas por turno para que todas disfruten.",
+    title: "GRUPOS CHIQUITOS",
+    description: "Máximo 6 niñas por turno para que todas disfruten.",
     icon: LuUsers,
-    badgeClass: "bg-rosa/10 text-rosa",
-    cardClass: "border-rose-200/80 bg-[#fff8fb]",
+    iconClass: "bg-rosa",
+    titleColor: "text-rosa",
   },
   {
-    title: "Materiales incluidos",
+    title: "MATERIALES INCLUIDOS",
     description:
-      "Usamos materiales de calidad, vos solo traes las ganas de crear.",
+      "Usamos materiales de calidad. Vos solo traés las ganas de crear.",
     icon: LuPalette,
-    badgeClass: "bg-amber-100 text-amber-500",
-    cardClass: "border-rose-200/80 bg-[#fff8fb]",
+    iconClass: "bg-naranja",
+    titleColor: "text-naranja",
   },
   {
-    title: "Actividades creativas",
+    title: "ACTIVIDADES CREATIVAS",
     description:
-      "Proyectos unicos y originales pensados para estimular la imaginación.",
+      "Proyectos únicos y originales pensados para estimular la imaginación.",
     icon: LuLightbulb,
-    badgeClass: "bg-violet-100 text-violet-500",
-    cardClass: "border-rose-200/80 bg-[#fff8fb]",
+    iconClass: "bg-lila",
+    titleColor: "text-lila",
   },
   {
-    title: "Ambiente cálido",
+    title: "AMBIENTE CÁLIDO",
     description:
-      "Un espacio pensado para que se sientan comodas, inspiradas y felices.",
+      "Un espacio pensado para que se sientan cómodas, inspiradas y felices.",
     icon: LuHeart,
-    badgeClass: "bg-emerald-100 text-emerald-600",
-    cardClass: "border-rose-200/80 bg-[#fff8fb]",
+    iconClass: "bg-celeste",
+    titleColor: "text-celeste",
   },
   {
-    title: "Para todas",
+    title: "PARA TODAS",
     description:
-      " Para niñas de 4 a 12 años que les encanta crear.",
+      "Para niñas de 4 a 12 años que les encanta crear.",
     icon: LuSmile,
-    badgeClass: "bg-pink-100 text-pink-500",
-    cardClass: "border-rose-200/80 bg-[#fff8fb]",
+    iconClass: "bg-rosa",
+    titleColor: "text-rosa",
   },
- 
 ];
 
 export default function Benefits() {
   return (
     <section
       id="beneficios"
-      className="relative overflow-hidden bg-[#fff9f6] py-20"
+      className="relative overflow-hidden bg-[#fff9f6] py-12"
     >
-      <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-white to-transparent" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.32em] text-rosa">
-            Beneficios
-          </p>
-          <h2 className="mt-4 text-3xl font-bold text-gris sm:text-4xl">
-            Una experiencia creativa pensada para florecer
+      <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white to-transparent" />
+
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="mb-10 flex items-center justify-center gap-3 text-center">
+          <PinkAccent />
+
+          <h2 className="text-xl font-bold text-gris md:text-2xl">
+            ACÁ CREÁS, TE DIVERTÍS Y TE LLEVÁS ALGO ÚNICO
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base font-medium text-gris-claro">
-            Cada taller combina creatividad, cariño y organización para que cada
-            niña se sienta segura, inspirada y feliz.
-          </p>
+
+          <PinkAccent className="scale-x-[-1]" />
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {items.map((item) => {
             const Icon = item.icon;
 
             return (
               <article
                 key={item.title}
-                className={`group rounded-[1.75rem] border p-5 shadow-[0_18px_35px_rgba(80,48,53,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(80,48,53,0.12)] ${item.cardClass}`}
+                className="
+                  w-full
+                  max-w-[205px]
+                  rounded-[32px]
+                  border
+                  border-[#F5CDD9]
+                  bg-white
+                  px-5
+                  py-7
+                  text-center
+                  transition-all
+                  duration-300
+                  hover:shadow-lg
+                "
               >
-                <div
-                  className={`mb-4 flex h-12 w-12 items-center justify-center rounded-2xl ${item.badgeClass}`}
-                >
-                  <Icon className="h-5 w-5" />
-                </div>
+                <BenefitIcon
+                  icon={Icon}
+                  className={item.iconClass}
+                />
 
-                <div className="space-y-2">
-                  <h3 className="text-base font-semibold text-gris">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-6 text-gris-claro">
-                    {item.description}
-                  </p>
-                </div>
+                <h3
+                  className={`mb-3 text-[17px] font-extrabold uppercase leading-5 ${item.titleColor}`}
+                >
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto max-w-[155px] text-[15px] leading-8 text-gris-claro">
+                  {item.description}
+                </p>
               </article>
             );
           })}
