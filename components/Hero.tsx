@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { LuHeart } from "react-icons/lu";
+import { LuHeart, LuSparkles } from "react-icons/lu";
 
 export default function Hero() {
   return (
@@ -11,8 +11,11 @@ export default function Hero() {
           <div className="flex h-full flex-col justify-center pl-6 -mt-10 lg:-mt-16">
             {" "}
             <div className="space-y-7">
-              <h1 className="max-w-[520px] ">
-                {" "}
+              <h1 className="relative max-w-[520px]">
+                <LuSparkles className="pointer-events-none absolute -left-6 top-2 hidden h-4 w-4 text-rosa/80 sm:block" />
+                <LuHeart className="pointer-events-none absolute right-10 top-1 hidden h-4 w-4 text-gris/80 sm:block" />
+                <LuSparkles className="pointer-events-none absolute right-20 top-20 hidden h-4 w-4 text-naranja/80 sm:block" />
+                <LuHeart className="pointer-events-none absolute left-7 -bottom-4 hidden h-3 w-3 text-naranja/80 sm:block" />
                 <span className="font-logo block  font-normal text-gris sm:text-[38px] lg:text-[28px]">
                   Un lugar donde{" "}
                 </span>
