@@ -1,6 +1,7 @@
 import Benefits from "@/components/Benefits";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Workshops from "@/components/Workshops";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <main id="inicio">
         <Hero />
         <Benefits />
+        <Workshops />
       </main>
     </div>
   );
