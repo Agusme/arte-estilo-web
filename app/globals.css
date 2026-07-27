@@ -2,33 +2,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-rosa:  #EB6B91;
-  --color-rosa-claro: #FFE3E9;
+  --color-rosa: #eb6b91;
+  --color-rosa-claro: #ffe3e9;
 
-  --color-celeste: #89C7B6;
-  --color-celeste-claro: #E0F7F5;
+  --color-celeste: #89c7b6;
+  --color-celeste-claro: #e0f7f5;
 
-  --color-lila: #B78BD7;
-  --color-lila-claro: #F3ECFF;
+  --color-lila: #b78bd7;
+  --color-lila-claro: #f3ecff;
 
-  --color-naranja: #F7B332;
+  --color-naranja: #f7b332;
 
-  --color-gris: #3B3B3B;  
+  --color-gris: #3b3b3b;
   --color-gris-medio: #7d8260;
 
-  --color-gris-claro: #B4BC89;
+  --color-gris-claro: #b4bc89;
 
-  --color-fondo: #FFF8F5;
+  --color-fondo: #fff8f5;
 
   --radius-xl: 2rem;
   --radius-lg: 1.5rem;
 }
 
+/* Tab icon color helpers */
+.tab-icon-ediciones {
+  color: var(--color-celeste);
+}
+.tab-icon-proximas {
+  color: var(--color-lila);
+}
+.tab-icon-especiales {
+  color: var(--color-naranja);
+}
+.tab-icon-todos {
+  color: var(--color-rosa);
+}
+
 * {
   transition:
-    color .2s,
-    background-color .2s,
-    border-color .2s;
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 .font-logo {
@@ -61,7 +75,14 @@ body {
   display: inline-flex;
   animation: slide-horizontal 12s linear infinite;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 @keyframes slide-horizontal {
   from {
     transform: translateX(0);
