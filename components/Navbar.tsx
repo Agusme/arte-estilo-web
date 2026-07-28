@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { LuHeart } from "react-icons/lu";
+
 type NavItem = {
   label: string;
   href: string;
@@ -16,18 +21,31 @@ export default function Navbar({
   isMobileOpen = false,
   onMobileLinkClick,
 }: NavbarProps) {
+  const [activeHash, setActiveHash] = useState("");
+
+  useEffect(() => {
+    const updateHash = () => setActiveHash(window.location.hash || "#inicio");
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
+
   if (variant === "desktop") {
     return (
-      <nav className="hidden items-center gap-1 md:flex" aria-label="Principal">
-        {items.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="rounded-full px-4 py-2 text-sm font-semibold text-[#6f6159] transition hover:bg-white hover:text-[#e85f88]"
-          >
-            {item.label}
-          </a>
-        ))}
+      <nav className="hidden items-center gap-1 lg:flex" aria-label="Principal">
+        {items.map((item) => {
+          const isActive = item.href === activeHash;
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className={`px-4 pb-1 text-sm by-agus-mena-font transition hover:text-rosa ${isActive ? "text-rosa border-b-2 border-rosa" : "text-[#4B5352]"}`}
+            >
+              {item.label}
+            </a>
+          );
+        })}
       </nav>
     );
   }
@@ -37,29 +55,34 @@ export default function Navbar({
   }
 
   return (
-    <div className="border-t border-rose-100 bg-[#fff7f3] px-4 pb-4 md:hidden">
+    <div className="border-t border-rose-100 bg-[#fff7f3] px-4 pb-4 lg:hidden">
       <nav
         className="mx-auto flex max-w-7xl flex-col gap-1 py-3"
         aria-label="Mobile"
       >
-        {items.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="rounded-2xl px-4 py-3 text-base font-bold text-[#6f6159] transition hover:bg-white hover:text-[#e85f88]"
-            onClick={onMobileLinkClick}
-          >
-            {item.label}
-          </a>
-        ))}
+        {items.map((item) => {
+          const isActive = item.href === activeHash;
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className={`rounded-2xl px-4 py-3 text-base font-bold transition hover:bg-white hover:text-rosa ${isActive ? "bg-white text-rosa" : "text-[#6f6159]"}`}
+              onClick={onMobileLinkClick}
+            >
+              {item.label}
+            </a>
+          );
+        })}
       </nav>
       <a
         href="https://wa.me/"
         target="_blank"
         rel="noreferrer"
-        className="mx-auto block max-w-7xl rounded-full bg-[#f4c45f] px-5 py-3 text-center text-sm font-black text-[#5b4636] shadow-sm"
+        className="ml-auto hidden items-center gap-2 rounded-full bg-rosa px-4 py-2 text-sm  text-white shadow-sm transition hover:bg-[#ff81b8] sm:flex by-agus-mena-font"
       >
-        Inscribite por WhatsApp
+        <span>Reserv&aacute; tu lugar</span>
+            <LuHeart className="h-4 w-4 text-rosa" />
+
       </a>
     </div>
   );
