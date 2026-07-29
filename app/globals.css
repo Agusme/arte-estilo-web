@@ -38,12 +38,6 @@
   color: var(--color-rosa);
 }
 
-* {
-  transition:
-    color 0.2s,
-    background-color 0.2s,
-    border-color 0.2s;
-}
 
 .font-logo {
   font-family: "Playwrite AR", cursive;
