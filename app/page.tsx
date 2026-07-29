@@ -1,7 +1,7 @@
 import Benefits from "@/components/Benefits";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Workshops from "@/components/Workshops";
+import Workshops from "@/components/workshops/Workshops";
 
 export default function Home() {
   return (
