@@ -4,11 +4,11 @@ import { LuHeart, LuSparkles } from "react-icons/lu";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-fondo">
-      <div className="mx-auto flex h-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid h-full w-full items-center gap-10 md:grid-cols-[0.7fr_1.3fr]">
+    <section className="relative min-h-screen overflow-hidden bg-fondo md:h-screen">
+      <div className="mx-auto flex min-h-screen max-w-7xl px-6 md:h-full lg:px-16">
+        <div className="grid w-full items-center gap-0 md:h-full md:gap-10 md:grid-cols-[0.7fr_1.3fr]">
           {/* Texto */}
-          <div className="flex h-full flex-col justify-center pl-6 pt-12 sm:pt-8 md:pt-6 lg:-mt-16 lg:pt-0">
+          <div className="flex flex-col justify-center py-12 sm:py-14 md:h-full md:pt-6 lg:-mt-16 lg:py-0">
             {" "}
             <div className="space-y-7">
               <h1 className="relative max-w-[520px]">
@@ -52,7 +52,7 @@ export default function Hero() {
 
           {/* Imagen */}
           {/* Imagen */}
-          <div className="relative h-full -mr-[calc((100vw-100%)/2)] overflow-hidden rounded-l-[2rem]">
+          <div className="relative z-0 -mr-6 -mb-20 h-[400px] overflow-hidden rounded-tl-[2rem] md:mb-0 md:h-full md:-mr-[calc((100vw-100%)/2)] md:rounded-l-[2rem]">
             {" "}
             <Image
               src="/images/hero.png"
@@ -67,7 +67,7 @@ export default function Hero() {
         </div>
 
         {/* Onda */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+        <div className="pointer-events-none absolute bottom-0 left-0 z-10 w-full overflow-hidden leading-none">
           <svg
             viewBox="0 0 1440 120"
             preserveAspectRatio="none"
