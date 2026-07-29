@@ -12,9 +12,9 @@ export function BenefitIcon({
   return (
     <div className="mb-5 flex justify-center">
       <div
-        className={`flex h-14 w-14 items-center justify-center rounded-full ${className}`}
+        className={`flex h-16 w-16 items-center justify-center rounded-full sm:h-14 sm:w-14 ${className}`}
       >
-        <Icon className="h-7 w-7 text-white" />
+        <Icon className="h-8 w-8 text-white sm:h-7 sm:w-7" />
       </div>
     </div>
   );

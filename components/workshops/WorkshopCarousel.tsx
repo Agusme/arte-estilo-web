@@ -39,7 +39,7 @@ export default function WorkshopCarousel({ workshops }: WorkshopCarouselProps) {
 
       {/* Carrusel */}
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-5 px-3 py-2">
+        <div className="flex gap-5 px-1 py-2 lg:px-3">
           {workshops.map((workshop) => (
             <div
               key={workshop.id}

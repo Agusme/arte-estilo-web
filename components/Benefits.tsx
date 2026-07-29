@@ -79,17 +79,20 @@ export default function Benefits() {
                 key={item.title}
                 className="
                   w-full
-                  max-w-[205px]
+                  max-w-[calc(100%-1rem)]
                   rounded-[32px]
                   border
                   border-[#F5CDD9]
                   bg-white
-                  px-5
-                  py-7
+                  px-7
+                  py-8
                   text-center
                   transition-all
                   duration-300
                   hover:shadow-lg
+                  sm:max-w-[205px]
+                  sm:px-5
+                  sm:py-7
                 "
               >
                 <BenefitIcon
@@ -98,12 +101,12 @@ export default function Benefits() {
                 />
 
                 <h3
-                  className={`mb-3 text-[17px] font-extrabold uppercase leading-5 ${item.titleColor}`}
+                  className={`mb-3 text-[18px] font-extrabold uppercase leading-6 sm:text-[17px] sm:leading-5 ${item.titleColor}`}
                 >
                   {item.title}
                 </h3>
 
-                <p className="mx-auto max-w-[155px] text-[15px] leading-8 text-gris-claro">
+                <p className="mx-auto max-w-[280px] text-base leading-7 text-gris-claro sm:max-w-[155px] sm:text-[15px] sm:leading-8">
                   {item.description}
                 </p>
               </article>
