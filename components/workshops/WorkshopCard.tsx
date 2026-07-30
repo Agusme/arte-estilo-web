@@ -19,7 +19,7 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
     },
     proximamente: {
       text: "¡MUY PRONTO!",
-      className: "bg-naranja text-white",
+      className: "bg-lila text-white",
     },
   };
 

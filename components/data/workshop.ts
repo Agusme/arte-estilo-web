@@ -1,6 +1,14 @@
 import { Workshop } from "../types/workshop";
 
 export const workshops: Workshop[] = [
+   {
+    id: 6,
+    title: "Macetas",
+    edition: "Próximamente",
+    image: "/images/workshops/maceta.webp",
+    status: "proximamente",
+    category: "proximas",
+  },
   {
     id: 1,
     title: "Tote bags",
@@ -41,4 +49,5 @@ export const workshops: Workshop[] = [
     status: "realizado",
     category: "ediciones",
   },
+  
 ];

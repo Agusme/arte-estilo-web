@@ -49,10 +49,8 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
           {/* Imagen */}
-          {/* Imagen */}
-          <div className="relative z-0 -mr-6 -mb-20 h-[400px] overflow-hidden rounded-tl-[2rem] md:mb-0 md:h-full md:-mr-[calc((100vw-100%)/2)] md:rounded-l-[2rem]">
+          <div className="relative z-0 -mt-8 -ml-6 -mr-6 -mb-20 h-[400px] overflow-hidden md:mt-0 md:ml-0 md:mb-0 md:h-full md:-mr-[calc((100vw-100%)/2)] rounded-none">
             {" "}
             <Image
               src="/images/hero.png"
@@ -60,9 +58,12 @@ export default function Hero() {
               fill
               priority
               sizes="(max-width: 768px) 100vw, 60vw"
-              className="object-cover object-[55%_50%]"
+              className="object-cover object-[55%_35%] md:object-[55%_50%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#fff9f6] via-[#fff9f640] to-transparent" />{" "}
+            {/* Desktop */}
+            <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#FFF8F5] via-[#FFF8F5]/35 to-transparent" />
+            {/* Mobile */}
+            <div className="absolute inset-x-0 top-0 h-28 md:hidden bg-gradient-to-b from-[#FFF8F5] via-[#FFF8F5]/70 to-transparent" />
           </div>
         </div>
 
