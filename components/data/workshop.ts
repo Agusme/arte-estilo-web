@@ -41,4 +41,12 @@ export const workshops: Workshop[] = [
     status: "realizado",
     category: "ediciones",
   },
+   {
+    id: 6,
+    title: "Macetas",
+    edition: "Próximamente",
+    image: "/images/workshops/maceta.webp",
+    status: "proximamente",
+    category: "proximas",
+  },
 ];
