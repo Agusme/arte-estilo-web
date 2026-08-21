@@ -40,7 +40,7 @@ export default function Navbar({
             <a
               key={item.href}
               href={item.href}
-              className={`px-4 pb-1 text-sm by-agus-mena-font transition hover:text-rosa ${isActive ? "text-rosa border-b-2 border-rosa" : "text-[#4B5352]"}`}
+              className={`px-4 pb-1 text-sm  transition hover:text-rosa ${isActive ? "text-rosa border-b-2 border-rosa" : "text-[#4B5352]"}`}
             >
               {item.label}
             </a>
@@ -78,7 +78,7 @@ export default function Navbar({
         href="https://wa.me/"
         target="_blank"
         rel="noreferrer"
-        className="ml-auto hidden items-center gap-2 rounded-full bg-rosa px-4 py-2 text-sm  text-white shadow-sm transition hover:bg-[#ff81b8] sm:flex by-agus-mena-font"
+        className="ml-auto hidden items-center gap-2 rounded-full bg-rosa px-4 py-2 text-sm  text-white shadow-sm transition hover:bg-[#ff81b8] sm:flex "
       >
         <span>Reserv&aacute; tu lugar</span>
             <LuHeart className="h-4 w-4 text-rosa" />

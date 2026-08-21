@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 const navItems = [
   { label: "Inicio", href: "#inicio" },
   { label: "Talleres", href: "#talleres" },
-  { label: "Galeria", href: "#galeria" },
+  { label: "Kits", href: "#kits" },
   { label: "Eventos", href: "#eventos" },
   { label: "Ubicación", href: "#ubicacion" },
 ];

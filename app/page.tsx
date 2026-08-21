@@ -1,6 +1,7 @@
 import Benefits from "@/components/Benefits";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Kits from "@/components/Kits";
 import Workshops from "@/components/workshops/Workshops";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Benefits />
         <Workshops />
+        <Kits />
       </main>
     </div>
   );
