@@ -14,8 +14,11 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "Arte & Estilo Art Room",
+  title: "Arte & Estilo",
   description: "Taller de arte para crear, jugar y aprender.",
+  icons: {
+    icon: "/images/favicon.webp",
+  },
 };
 
 export default function RootLayout({
